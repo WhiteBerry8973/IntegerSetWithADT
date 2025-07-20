@@ -35,6 +35,10 @@ public class IntegerSet {
         }
     }
 
+    /**
+     * Add numbers
+     * @param x ตัวเลขที่ต้องการเพิ่ม
+     */
     public void add(Integer x) {
         if (x == null) {
             throw new RuntimeException("Can not add null");
@@ -59,6 +63,10 @@ public class IntegerSet {
         CheckRep();
     }
 
+    /**
+     * Remove numbers
+     * @param x ตัวเลขที่ต้องการลบ
+     */
     public void remove(Integer x) {
         if (x == null) {
             throw new RuntimeException("Can not remove null");
@@ -67,10 +75,19 @@ public class IntegerSet {
         CheckRep();
     }
 
+    /**
+     * ตรวจสอบตัวเลขว่าอยู่ในเซตหรือไม่
+     * @param x
+     * @return true หาก x อยู่ในเซต false หาก x ไม่อยู่ในเซต
+     */
     public boolean contains(int x) {
         return Numbers.contains(x);
     }
 
+    /**
+     * คืนค่าจำนวณของเซต
+     * @return จำนวณสมาชิกในเซต
+     */
     public int size() {
         return Numbers.size();
     }
